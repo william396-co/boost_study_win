@@ -1,5 +1,4 @@
 #pragma once
-
 #include <iostream>
 #include <functional>
 #include <thread>
@@ -11,9 +10,9 @@ namespace timer5 {
 		explicit printer(boost::asio::io_context& io) :
 			strand_{ boost::asio::make_strand(io) },
 			timer1_{ io,boost::asio::chrono::seconds{1} },
-			timer2_{io,boost::asio::chrono::seconds{1}},
+			timer2_{ io,boost::asio::chrono::seconds{1} },
 			count_{} {
-			
+
 			timer1_.async_wait(boost::asio::bind_executor(strand_, std::bind(&printer::print1, this)));
 			timer2_.async_wait(boost::asio::bind_executor(strand_, std::bind(&printer::print2, this)));
 
@@ -44,13 +43,13 @@ namespace timer5 {
 		int count_;
 	};
 
-	void timer_sync_multithread() {		
+	void timer_sync_multithread() {
 
 		boost::asio::io_context io;
 		printer p(io);
 		std::thread t([&] {io.run(); });
 		io.run();
 
-		t.join();		
+		t.join();
 	}
 }

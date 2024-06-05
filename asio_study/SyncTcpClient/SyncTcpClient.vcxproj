@@ -21,10 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{0dcc3ebf-d43d-4411-be94-92d5893d63d3}</ProjectGuid>
-    <RootNamespace>HelloBoost</RootNamespace>
+    <ProjectGuid>{83462d90-5f75-49d0-ba12-ee4925b62163}</ProjectGuid>
+    <RootNamespace>SyncTcpClient</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Basic_Skills</ProjectName>
+    <ProjectName>SyncTcplient</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -134,13 +134,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="binding_arg_completion_handler.h" />
-    <ClInclude Include="memfn_completion_handler.h" />
-    <ClInclude Include="timer_async.h" />
-    <ClInclude Include="timer_sync.h" />
-    <ClInclude Include="timer_sync_multithread.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

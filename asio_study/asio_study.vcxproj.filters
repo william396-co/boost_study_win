@@ -15,25 +15,25 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
+    <ClInclude Include="BasicSkills\binding_arg_completion_handler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicSkills\memfn_completion_handler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicSkills\timer_async.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicSkills\timer_sync.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicSkills\timer_sync_multithread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="timer_sync.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="timer_async.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="binding_arg_completion_handler.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="memfn_completion_handler.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="timer_sync_multithread.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
+    <ClCompile Include="BasicSkills\main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
