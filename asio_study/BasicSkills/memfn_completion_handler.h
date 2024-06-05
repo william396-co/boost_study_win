@@ -8,7 +8,7 @@ namespace timer4 {
 
 	class printer {
 	public:
-		explicit printer(boost::asio::io_context& io):
+		explicit printer(boost::asio::io_context& io) :
 			timer_{ io,boost::asio::chrono::seconds{1} },
 			count_{} {
 			timer_.async_wait(std::bind(&printer::print, this));
