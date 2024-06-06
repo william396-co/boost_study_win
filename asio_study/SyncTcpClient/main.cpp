@@ -8,14 +8,14 @@ using boost::asio::ip::tcp;
 int main(int argc, char* argv[])
 {
 	try {
-		if (argc != 2) {
-			std::cerr << "Usage Client<Host>\n";
+		if (argc != 3) {
+			std::cerr << "Usage Client<Host> <Port>\n";
 			return 1;
 		}
 
 		boost::asio::io_context io;
 		tcp::resolver resolver(io);
-		tcp::resolver::results_type endpoints = resolver.resolve(argv[1], "daytime");
+		auto endpoints = resolver.resolve(argv[1], argv[2]);
 
 		tcp::socket socket(io);
 		boost::asio::connect(socket, endpoints);

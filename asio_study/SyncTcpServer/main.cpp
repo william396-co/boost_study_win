@@ -13,12 +13,17 @@ std::string make_daytime_string() {
 	return ctime(&now);
 }
 
-int main() {
+int main(int argc,char* argv[]) {
+	auto port = 9527;
+	if (argc > 1) {
+		port = std::strtol(argv[1], nullptr, 10);
+	}
+
 	try {
 
 		boost::asio::io_context io;
 
-		tcp::acceptor accepter(io, tcp::endpoint(tcp::v4(), 13));
+		tcp::acceptor accepter(io, tcp::endpoint(tcp::v4(), port));
 		for (;;) {
 			tcp::socket socket(io);
 			accepter.accept(socket);
