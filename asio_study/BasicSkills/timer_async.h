@@ -14,6 +14,6 @@ namespace timer2 {
 		boost::asio::steady_timer t(io, boost::asio::chrono::seconds(5));
 
 		t.async_wait(&print);
-		io.run();
+		io.run();//like thread.join()
 	}
 }

@@ -5,9 +5,11 @@ VisualStudioVersion = 17.7.34302.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BasicSkills", "asio_study.vcxproj", "{D981CEDB-F0F5-4D5A-85BC-18FDCF69FA0F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SyncTcpClient", "SyncTcpClient\SyncTcpClient.vcxproj", "{83462D90-5F75-49D0-BA12-EE4925B62163}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SyncTcplient", "SyncTcpClient\SyncTcpClient.vcxproj", "{83462D90-5F75-49D0-BA12-EE4925B62163}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SyncTcpServer", "SyncTcpServer\SyncTcpServer.vcxproj", "{E691AAA3-7964-4232-868A-E8274BE815F4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AsyncTcpServer", "AsyncTcpServer\AsyncTcpServer.vcxproj", "{CDA83B68-7428-48D7-9038-16C93DC055DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,14 @@ Global
 		{E691AAA3-7964-4232-868A-E8274BE815F4}.Release|x64.Build.0 = Release|x64
 		{E691AAA3-7964-4232-868A-E8274BE815F4}.Release|x86.ActiveCfg = Release|Win32
 		{E691AAA3-7964-4232-868A-E8274BE815F4}.Release|x86.Build.0 = Release|Win32
+		{CDA83B68-7428-48D7-9038-16C93DC055DF}.Debug|x64.ActiveCfg = Debug|x64
+		{CDA83B68-7428-48D7-9038-16C93DC055DF}.Debug|x64.Build.0 = Debug|x64
+		{CDA83B68-7428-48D7-9038-16C93DC055DF}.Debug|x86.ActiveCfg = Debug|Win32
+		{CDA83B68-7428-48D7-9038-16C93DC055DF}.Debug|x86.Build.0 = Debug|Win32
+		{CDA83B68-7428-48D7-9038-16C93DC055DF}.Release|x64.ActiveCfg = Release|x64
+		{CDA83B68-7428-48D7-9038-16C93DC055DF}.Release|x64.Build.0 = Release|x64
+		{CDA83B68-7428-48D7-9038-16C93DC055DF}.Release|x86.ActiveCfg = Release|Win32
+		{CDA83B68-7428-48D7-9038-16C93DC055DF}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

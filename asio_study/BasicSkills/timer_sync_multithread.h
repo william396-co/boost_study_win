@@ -22,7 +22,7 @@ namespace timer5 {
 		}
 		void print1() {
 			if (count_ < 10) {
-				std::cout << "Timer1_ " << count_ << "\n";
+				std::cout << "Timer 1: " << count_ << "\n";
 				++count_;
 				timer1_.expires_at(timer1_.expiry() + boost::asio::chrono::seconds{ 1 });
 				timer1_.async_wait(boost::asio::bind_executor(strand_, std::bind(&printer::print1, this)));
@@ -30,7 +30,7 @@ namespace timer5 {
 		}
 		void print2() {
 			if (count_ < 10) {
-				std::cout << "Timer2_ " << count_ << "\n";
+				std::cout << "Timer 2: " << count_ << "\n";
 				++count_;
 				timer2_.expires_at(timer2_.expiry() + boost::asio::chrono::seconds{ 1 });
 				timer2_.async_wait(boost::asio::bind_executor(strand_, std::bind(&printer::print2, this)));
