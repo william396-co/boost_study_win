@@ -1,7 +1,11 @@
 #include <iostream>
 #include <stdexcept>
 
+#include <boost/asio.hpp>
+#include <boost/bind/bind.hpp>
+
 #include "../Common/udp_server.h"
+
 
 int main(int argc, char* argv[]) {
 
@@ -9,10 +13,11 @@ int main(int argc, char* argv[]) {
 	if (argc > 1) {
 		port = std::strtol(argv[1], nullptr, 10);
 	}
-
 	try {
+
 		boost::asio::io_context io;
-		udp_server server{ io, port };
+		udp_server server1{ io,port };
+
 		io.run();
 	}
 	catch (std::exception& e) {
