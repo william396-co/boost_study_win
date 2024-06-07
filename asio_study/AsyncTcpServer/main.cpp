@@ -8,8 +8,8 @@
 int main(int argc,char* argv[]) {
 
 	auto port = 9527;
-	if(argc> 1){
-		port = std::strtol(argv[1], nullptr, 10);
+	if(argc> 1){		
+		port = std::atoi(argv[1]);
 	}
 
 	try {

@@ -32,8 +32,8 @@ private:
 		}
 		start_receive();
 	}
-	void handle_send(std::shared_ptr<std::string> const& msg) {
-
+	void handle_send(std::shared_ptr<std::string>  msg) {
+		std::cout << __FUNCTION__ << "\n";
 	}
 private:
 	udp::socket socket_;
