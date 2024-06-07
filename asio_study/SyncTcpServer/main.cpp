@@ -4,14 +4,10 @@
 #include <stdexcept>
 
 #include <boost/asio.hpp>
+#include "../Common/utils.h"
 
 using boost::asio::ip::tcp;
 
-
-std::string make_daytime_string() {
-	time_t now = time(0);
-	return ctime(&now);
-}
 
 int main(int argc,char* argv[]) {
 	auto port = 9527;
@@ -27,7 +23,7 @@ int main(int argc,char* argv[]) {
 		for (;;) {
 			tcp::socket socket(io);
 			accepter.accept(socket);
-			std::string message = make_daytime_string();
+			std::string message = utils::make_daytime_string();
 
 			boost::system::error_code ignore_error;
 			boost::asio::write(socket, boost::asio::buffer(message), ignore_error);

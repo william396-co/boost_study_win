@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 #include <string>
 #include <memory>
@@ -8,6 +10,7 @@
 #include "utils.h"
 
 using boost::asio::ip::tcp;
+
 class tcp_connection : public std::enable_shared_from_this< tcp_connection> {
 public:
 	using pointer = std::shared_ptr<tcp_connection>;
@@ -18,7 +21,7 @@ public:
 		return socket_;
 	}
 	void start() {
-		message_ = make_daytime_string();
+		message_ = utils::make_daytime_string();
 		boost::asio::async_write(socket_,
 			boost::asio::buffer(message_),
 			boost::bind(&tcp_connection::handle_write, shared_from_this(),

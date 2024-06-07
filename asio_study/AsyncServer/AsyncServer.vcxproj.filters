@@ -19,15 +19,4 @@
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\Common\udp_server.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Common\utils.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Common\tcp_server.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-  </ItemGroup>
 </Project>

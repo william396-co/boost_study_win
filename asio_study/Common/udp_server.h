@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 #include <array>
 #include <memory>
@@ -23,7 +25,7 @@ private:
 	void handle_receive(boost::system::error_code const& error) {
 
 		if (!error) {
-			std::shared_ptr<std::string> message(new std::string(make_daytime_string()));
+			std::shared_ptr<std::string> message(new std::string(utils::make_daytime_string()));
 			
 			socket_.async_send_to(boost::asio::buffer(*message), remote_endpoint_,
 				std::bind(&udp_server::handle_send, this, message));
