@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdexcept>
+#include <boost/asio.hpp>
 
 #include "../Common/udp_server.h"
 

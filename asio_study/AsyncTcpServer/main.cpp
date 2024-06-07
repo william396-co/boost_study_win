@@ -1,4 +1,6 @@
 #include <iostream>
+#include <stdexcept>
+#include <boost/asio.hpp>
 
 #include "../Common/tcp_server.h"
 

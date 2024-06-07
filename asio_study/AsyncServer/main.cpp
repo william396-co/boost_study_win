@@ -1,10 +1,9 @@
 #include <iostream>
 #include <stdexcept>
-
 #include <boost/asio.hpp>
-#include <boost/bind/bind.hpp>
 
 #include "../Common/udp_server.h"
+#include "../Common/tcp_server.h"
 
 
 int main(int argc, char* argv[]) {
@@ -17,6 +16,7 @@ int main(int argc, char* argv[]) {
 
 		boost::asio::io_context io;
 		udp_server server1{ io,port };
+		tcp_server server2{ io,port };		
 
 		io.run();
 	}
